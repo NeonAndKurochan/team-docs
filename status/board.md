@@ -5,8 +5,8 @@
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
 ## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-24
-NOW: events_to_video本体完成・第2段（WebUIボタン統合）設計査読中
-NEXT: 第2段設計凍結→着工
+NOW: 第2段（DES-0007）Step0待ち・合同台帳の器完成
+NEXT: 台帳初期記入（両部隊）
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
