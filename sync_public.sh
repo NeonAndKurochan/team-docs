@@ -25,6 +25,27 @@ check() {
   fi
 }
 
+# 金額/収益語＋数字の同一行共起のみを検出（語の単独マッチは除外）
+# ★ git grep出力は「ref:path:line:content」形式のため、行番号自体が
+#   数字判定に混入しないよう content部分だけを切り出して判定する
+check_cooccur() {
+  local label="$1" wordpat="$2"
+  local hits=""
+  local line content
+  while IFS= read -r line; do
+    [ -z "$line" ] && continue
+    content="$(printf '%s\n' "$line" | cut -d: -f4-)"
+    if printf '%s\n' "$content" | grep -qE '[0-9]'; then
+      hits="${hits}${line}"$'\n'
+    fi
+  done < <(git grep -InE "$wordpat" "$SOURCE_BRANCH" -- '*.md' 2>/dev/null || true)
+  if [ -n "$hits" ]; then
+    echo "--- 検出: $label ---"
+    printf '%s' "$hits"
+    FOUND=1
+  fi
+}
+
 echo "=== C検査（public化前グレップ実測・対象branch: $SOURCE_BRANCH） ==="
 
 check "ローカル実パス /mnt/c/"       '/mnt/c/'
@@ -33,11 +54,9 @@ check "ローカル実パス C:\\\\Users"   'C:\\Users'
 check "ローカル実パス johnl"         'johnl'
 check "WSLユーザー名 kaos"           '\<kaos\>'
 check "メールアドレス"               '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
-check "金額/収益: 円"                '円'
-check "金額/収益: 万円"              '万円'
-check "金額/収益: \$"                '\$'
-check "金額/収益: 売上"              '売上'
-check "金額/収益: 収益"              '収益'
+check "金額: 円/万円（実数値）"       '[0-9,]+ *(円|万円)'
+check "金額: \$（実数値）"            '\$[0-9]'
+check_cooccur "金額/収益: 売上・収益・利益と数字の同一行共起" '(売上|収益|利益)'
 
 echo "=== git履歴の著者/コミッター識別チェック（全ref） ==="
 BAD_IDENTITIES="$(git log --all --format='%an|%ae|%cn|%ce' \
