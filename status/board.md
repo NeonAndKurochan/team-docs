@@ -4,9 +4,9 @@
 形式固定：`## 部隊名｜owner: 名｜updated: 日付` + NOW/NEXT/BLOCKED の3行のみ。
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
-## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-24
-NOW: 第2段（DES-0007）Step0待ち・合同台帳の器完成
-NEXT: 台帳初期記入（両部隊）
+## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-25
+NOW: DES-0007完成・events_to_video計画完結
+NEXT: 脚本authoring調査（クロB:Q2〜Q7）・合同台帳初期記入・ポータルUIコンペ準備
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
