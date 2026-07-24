@@ -5,8 +5,8 @@
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
 ## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-24
-NOW: 優先順位改訂（DEC-0014）。優先1=動画（events_to_video/DES-0005→Wan2GP本格着手）／優先2=ゲーム（WebUI実制作・store-sim商品化）
-NEXT: CG集レーンは保険枠へ降格（FANZA/DLsite枠が余る時）。カオスファクトリー（DES-0006）・ネオンUIモック（LET-0004）は保留
+NOW: events_to_video本体完成・第2段（WebUIボタン統合）設計査読中
+NEXT: 第2段設計凍結→着工
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
