@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# public化前C検査＋public branchへの内容同期（履歴は持ち込まない）
+# public化前C検査＋public branchへの内容同期（履歴は持ち込まない）＋
+# 検査合格・コミット後に origin へ push（public:main固定）
 # 使い方: ./sync_public.sh [SOURCE_BRANCH（既定: master）]
 set -euo pipefail
 
@@ -70,12 +71,22 @@ git ls-files -z | xargs -0 -r rm -f
 git checkout "$SOURCE_BRANCH" -- .
 git add -A
 
+SYNCED=0
 if git diff --cached --quiet; then
   echo "差分なし。コミット不要。"
 else
   git commit -m "sync: $(date +%Y-%m-%d) content sync from ${SOURCE_BRANCH} (no history import)"
   echo "public ブランチへコミット完了。"
+  SYNCED=1
+fi
+
+echo "=== 検査合格・コミット後に origin へ push（public:main固定） ==="
+if [ "$SYNCED" -eq 1 ]; then
+  git push origin public:main
+  echo "push完了：public -> origin/main"
+else
+  echo "コミットなし（差分なし）につきpushはスキップ。"
 fi
 
 git checkout "$ORIGINAL_BRANCH"
-echo "=== 完了（${ORIGINAL_BRANCH} に復帰）。リモートへのpushはこのスクリプトでは行いません ==="
+echo "=== 完了（${ORIGINAL_BRANCH} に復帰） ==="
