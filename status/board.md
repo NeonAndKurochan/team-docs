@@ -5,8 +5,8 @@
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
 ## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-26
-NOW: ネオンQ1受領・衝突2件相互承認済み（LET-0011/0012）。残件=LET-0010の裁定3/4/6回答のみ
-NEXT: LET-0010回答受領→DES-0009 r2凍結（source_episode_id・game-handoff・裁定final化）→蠱毒側基盤整理とWebUI側S2の着工調整
+NOW: DES-0009 r2凍結。脚本authoring連携の設計フェーズ完全クローズ（LET-0010〜0013終着・裁定9件全final）
+NEXT: ルナール依頼/返却契約の共同設計。蠱毒側基盤整理はネオン側・novel_mvp側S2はS1握り成立後着工可。Wan2GP線（DEC-0014優先1後半）再開検討
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
