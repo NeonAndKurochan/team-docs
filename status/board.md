@@ -4,9 +4,9 @@
 形式固定：`## 部隊名｜owner: 名｜updated: 日付` + NOW/NEXT/BLOCKED の3行のみ。
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
-## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-26
-NOW: DES-0010凍結（DEC-0023）。Wan2GP i2v Discord線の施工開始（S0.5点火試験）
-NEXT: S1ビカラ結線（Eagle自動登録込み）。ネオンS1着弾時は検分を割り込み最優先
+## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-07-29
+NOW: S0.11＝SE自動付与の実証（タイミング測定器方式）。DEC-0024参照
+NEXT: S0.12 HyperFrames編集自動化の点火→S1ビカラ結線。ネオンS1着弾時は検分を割り込み最優先
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
