@@ -4,9 +4,9 @@
 形式固定：`## 部隊名｜owner: 名｜updated: 日付` + NOW/NEXT/BLOCKED の3行のみ。
 自分の部隊欄だけ更新すること。他部隊の欄は変更しない。
 
-## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-08-01
-NOW: 動画工房Step1施工中（Step0調査完了・裁定6件=DEC-0030）
-NEXT: Step1検収→Step2以降逐次投下。ネオンS1着弾時は検分を割り込み最優先
+## 司令塔（インフラ）｜owner: 司令塔｜updated: 2026-08-05
+NOW: 動画工房Step0-6完走（実弾開通・素振り完了・Step6クローズ）。次窓でStep7統合検収
+NEXT: Step7=新実弾1周通し→DES-0011 r2訂正束→S0.15商品実弾。ネオンS1着弾時は検分最優先
 BLOCKED: なし
 
 ## ゲーム施工（store-sim）｜owner: ゲーム施工担当｜updated: 2026-07-20
